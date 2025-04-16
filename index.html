@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Home | My Portfolio</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+
+
+
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+
+</head>
+<body class="index-page">
+<div id="particles-js"></div>
+<nav>
+<h1>Haotong's Portfolio</h1>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="other.html">Other</a></li>
+</ul>
+</nav>
+<div class="main">
+<div class="left">
+<h2>Haotong 吴昊桐</h2>
+<div class="typewriter" id="welcome-text"></div>
+<div class="socials">
+<a href="https://github.com/HtWu123" target="_blank">
+<i class="fab fa-github"></i> GitHub
+        </a>
+<a href="mailto:hw2933@nyu.edu">
+<i class="fas fa-envelope"></i> Email
+        </a>
+</div>
+</div>
+<div class="right">
+<div class="time-box" id="time-box">Loading time...</div>
+</div>
+</div>
+<footer>
+<p>© 2025 Haotong Wu.</p>
+</footer>
+<script>
+    function updateTime() {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString();
+      const dateString = now.toLocaleDateString();
+      document.getElementById('time-box').textContent = dateString + ' ' + timeString;
+    }
+
+    setInterval(updateTime, 1000);
+    updateTime();
+
+    const welcomeText = "Welcome to my page! :)";
+    let i = 0;
+    function typeWriter() {
+      if (i < welcomeText.length) {
+        document.getElementById("welcome-text").textContent += welcomeText.charAt(i);
+        i++;
+        setTimeout(typeWriter, 50);
+      }
+    }
+    window.onload = typeWriter;
+
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80 },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5 },
+        "size": { "value": 3 },
+        "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.4, "width": 1 },
+        "move": { "enable": true, "speed": 2 }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+          "repulse": { "distance": 100 },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+</body>
+</html>
