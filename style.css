@@ -17,14 +17,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-page {
   background: linear-gradient(135deg, #CE9FFC, #e7c2fb);
+    cursor: url('images/mouse.png'), auto;
 }
 
 .projects-page {
   background: linear-gradient(135deg, #90F7EC, #32CCBC);
+    cursor: url('images/mouse.png'), auto;
 }
 
 .other-page {
   background: linear-gradient(135deg, #f6d365, #fda085);
+    cursor: url('images/mouse.png'), auto;
 }
 
 * { box-sizing: border-box; }
