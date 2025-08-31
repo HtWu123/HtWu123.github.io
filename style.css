@@ -18,6 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 .about-page {
   background: linear-gradient(135deg, #CE9FFC, #e7c2fb);
     cursor: url('images/mouse.png'), auto;
+
 }
 
 .projects-page {
@@ -612,4 +613,23 @@ body {
   padding: 0.4rem 0.6rem;
   border-radius: 0.5rem;
   display: inline-block;
+}
+
+body, 
+.index-page,
+.about-page,
+.projects-page,
+.other-page {
+  cursor: url('images/mouse.png') 0 0, auto;
+}
+
+/* hover & active 状态：蓝色卡通小手 */
+a:hover, a:active,
+button:hover, button:active,
+[role="button"]:hover, [role="button"]:active,
+.index-page a:hover, .index-page a:active,
+.about-page a:hover, .about-page a:active,
+.projects-page a:hover, .projects-page a:active,
+.other-page a:hover, .other-page a:active {
+  cursor: url('images/click.png') 12 2, pointer;
 }
